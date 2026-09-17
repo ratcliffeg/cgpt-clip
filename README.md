@@ -66,3 +66,9 @@ The finished package will contain `pet.json` with `spriteVersionNumber: 2` and `
 ## Credits
 
 Character concept: Clippy, Microsoft's paperclip assistant. This is an unofficial fan project. Artwork generated with OpenAI imagegen; build and QA utilities supplied by the hatch-pet skill.
+
+## License
+
+Original project contributions are available under the [MIT License](LICENSE), copyright © 2026 Guy Ratcliffe. You can use, modify, and share them under its terms.
+
+The bundled hatch-pet Python tools retain their [Apache 2.0 license](LICENSES/Apache-2.0.txt). See [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and artwork scope. Neither license grants rights to Microsoft's Clippy branding or character.
