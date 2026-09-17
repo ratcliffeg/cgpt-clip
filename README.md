@@ -1,6 +1,6 @@
 # cgpt-clip
 
-A Clippy-inspired animated companion for Codex, created with hatch-pet and imagegen.
+A Clippy-inspired animated companion for ChatGPT desktop pets and Codex, created with hatch-pet and imagegen.
 
 ![Clippy reference](source/references/canonical-base.png)
 
@@ -14,6 +14,32 @@ A Clippy-inspired animated companion for Codex, created with hatch-pet and image
 - `tools/`: deterministic Python tools from the hatch-pet workflow for extraction, assembly, previews, and validation.
 
 The target is a Codex v2 atlas: 1536 × 2288 pixels, 8 × 11 cells, nine animation states and sixteen gaze directions. Each cell is 192 × 208 pixels.
+
+## Import into ChatGPT pets
+
+The installable files are still being validated. Use these steps once the `pet/` and `web/` folders appear in this repository; the reference image above is not an installable sprite sheet.
+
+### ChatGPT desktop (macOS)
+
+Download this repository using **Code → Download ZIP**, unzip it, and open the downloaded folder. Copy both files from `pet/clippy/` into `~/.codex/pets/clippy/` (or `$CODEX_HOME/pets/clippy/` if you configured a custom location):
+
+```text
+~/.codex/pets/clippy/
+  pet.json
+  spritesheet.webp
+```
+
+In Finder, **Go → Go to Folder…** opens `~/.codex`; create the `pets/clippy` folders if needed. Keep the two filenames unchanged. The manifest declares `spriteVersionNumber: 2` for the 1536 × 2288 desktop atlas.
+
+In ChatGPT, open **Settings → Pets**, click **Refresh**, and select **Clippy**. Enter `/pet` or choose **Show pet** in the command menu to display it. If absent, check the folder structure and restart the app.
+
+### ChatGPT web
+
+When Pets are available for your account/workspace, open **Settings → Personalization → Pet → Select pet → Upload pet** and select `web/clippy.webp`.
+
+Web uploads require a transparent **1536 × 1872** PNG/WebP under **20 MiB**. Use the dedicated web export; the taller desktop v2 atlas will not meet that size requirement. Desktop pets do not automatically sync to the web.
+
+Menu names and web requirements verified against [OpenAI's Pets documentation](https://learn.chatgpt.com/docs/pets). The local desktop folder layout follows this project's hatch-pet packaging contract.
 
 ## Working with the tools
 
