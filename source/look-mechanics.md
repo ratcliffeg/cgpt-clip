@@ -1,0 +1,7 @@
+# Clippy look mechanics
+
+The lower rounded wire loop stays anchored at the idle baseline with fixed width and volume. The upper wire loop bends elastically toward the target; the whole sprite never rotates. Both attached physical eyeballs rotate together, including whites, lids and highlights, with brows following their sockets. Eyes lead and the upper loop follows. The free inner tip stays attached to its original side and responds only slightly; no props or added anatomy.
+
+000 up: frontal lower loop; top wire extends gently upward, eyes pitch upward with pupils high and lower sclera visible; brows lift. 090 screen-right: lower loop stays frontal while upper loop bends right and eye globes yaw right, pupils on right-facing surfaces; far eye slightly occluded. 180 down: lower loop fixed; upper arch bows forward/down, eyelids lower and eyes pitch down, upper sclera visible. 270 screen-left: upper loop bends left and eye globes yaw left with pupils on left-facing surfaces; opposite far eye slightly occluded. Preserve asymmetric wire topology throughout, never mirror the character.
+
+Every 22.5-degree step advances smoothly around this clock with similar bend/eye rotation magnitude. Intermediate gaze includes both intended axes, not just pupil sliding. Keep eye size, wire thickness, body height and lower anchor consistent. Upper movement budget approximately 10-16 pixels in final 192x208 cell; lower anchor moves no more than 2 pixels. 157.5 to 180 and 337.5 to 000 use identical increments to internal pairs. All directions differ visibly from neutral.

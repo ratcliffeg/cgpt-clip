@@ -4,7 +4,7 @@ A Clippy-inspired animated companion for ChatGPT desktop pets and Codex, created
 
 ![Clippy reference](source/references/canonical-base.png)
 
-**Status:** work in progress. The character reference and build tools are available; animation generation and validation are ongoing. There is no installable pet package yet.
+**Status:** work in progress. The character reference and build tools are available; all nine standard animation states have passed visual review; the sixteen gaze directions and final packaging are ongoing. There is no installable pet package yet.
 
 ## What's here
 
@@ -14,6 +14,10 @@ A Clippy-inspired animated companion for ChatGPT desktop pets and Codex, created
 - `tools/`: deterministic Python tools from the hatch-pet workflow for extraction, assembly, previews, and validation.
 
 The target is a Codex v2 atlas: 1536 × 2288 pixels, 8 × 11 cells, nine animation states and sixteen gaze directions. Each cell is 192 × 208 pixels.
+
+## Animation preview
+
+![Idle animation](previews/idle.gif) ![Greeting animation](previews/waving.gif) ![Jump animation](previews/jumping.gif)
 
 ## Import into ChatGPT pets
 
